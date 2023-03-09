@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <app-filter (textChange)="filterChange($event)"></app-filter>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card *ngFor="let image of images;">
+    <img [src]="image.photo" class="card-img-top">
+    <ion-card-content>
+      {{ image.text }}
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
