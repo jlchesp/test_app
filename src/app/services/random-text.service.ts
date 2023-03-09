@@ -12,7 +12,7 @@ export class RandomTextService {
             min: 5
         },
         wordsPerSentence: {
-            max: 20,
+            max: 10,
             min: 5
         }
     });
