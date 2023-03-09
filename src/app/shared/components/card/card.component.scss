@@ -1,0 +1,13 @@
+
+.personalized-card {
+    height: 95%;
+
+    &:hover {
+        background-color: hsl(240, 100%, 90%);
+    }
+
+    &.text {
+        font-size: 10pt;
+        color: black;
+    }
+}

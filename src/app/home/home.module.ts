@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomePageRoutingModule } from './home-routing.module';
 import { HomePage } from './pages/home.page';
 import { FilterComponent } from './components/filter/filter.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import { FilterComponent } from './components/filter/filter.component';
     FormsModule,
     IonicModule,
     ReactiveFormsModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    SharedModule
   ],
   declarations: [
     HomePage,

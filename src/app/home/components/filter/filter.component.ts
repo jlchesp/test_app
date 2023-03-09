@@ -16,7 +16,7 @@ export class FilterComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     if (this.filterForm) {
       this.filterForm?.get('filter')?.valueChanges
         .subscribe(text => {

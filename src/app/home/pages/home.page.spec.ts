@@ -3,7 +3,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { IonicModule } from '@ionic/angular';
 import { of } from 'rxjs';
-import { ImageService } from 'src/app/services/image.service';
+import { ImageService } from 'src/app/shared/services/image.service';
 import { FilterComponent } from '../components/filter/filter.component';
 
 import { HomePage } from './home.page';
