@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { InfiniteScrollCustomEvent } from '@ionic/angular';
 import { Subject, takeUntil } from 'rxjs';
 import { Image } from 'src/app/models/image.interface';
 import { ImageService } from 'src/app/shared/services/image.service';
@@ -23,6 +24,13 @@ export class HomePage implements OnInit, OnDestroy {
 
   filterChange(text: string) {
     this.images = (!text || text === '') ? this.filterImages : this.filterImages.filter(image => image.id.includes(text) || image.text.toLowerCase().includes(text.toLowerCase()));
+  }
+
+  onIonInfinite(ev: Event) {
+    this.getImages();
+    setTimeout(() => {
+      (ev as InfiniteScrollCustomEvent).target.complete();
+    }, 500);
   }
 
   ngOnDestroy() {
