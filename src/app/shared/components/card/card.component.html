@@ -1,5 +1,5 @@
 <ion-card class="personalized-card">
-    <img [src]="image.photo" class="card-img-top">
+    <img [src]="image.photo" (error)="changeSrc($event)" class="card-img-top">
     <ion-card-content class="personalized-card text">
         {{ image.text }}
     </ion-card-content>

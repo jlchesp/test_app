@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Image } from '../../models/image.interface';
+import { Image } from '../models/image.interface';
 import { RandomTextService } from './random-text.service';
 
 @Injectable({

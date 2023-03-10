@@ -1,5 +1,5 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { Image } from 'src/app/models/image.interface';
+import { Component, Input, OnInit } from '@angular/core';
+import { Image } from 'src/app/shared/models/image.interface';
 
 @Component({
   selector: 'app-card',
@@ -14,9 +14,15 @@ export class CardComponent implements OnInit {
     text: ''
   };
 
+  defaultImagePath: string = '../../../../assets/images/default.jpg'
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  changeSrc(event: any) {
+    event.target.src = this.defaultImagePath;
   }
 
 }

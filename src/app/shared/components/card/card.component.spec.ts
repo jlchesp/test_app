@@ -29,5 +29,15 @@ describe('CardComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should image error', () => {
+    const event = {
+      target: {
+        src: ''
+      }
+    };
+    component.changeSrc(event);
+    expect(event.target.src).toEqual(component.defaultImagePath);
+  });
+
 
 });
